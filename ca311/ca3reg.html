@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ca3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+</head>
+<body>
+    <section id="auth">
+        <h2>Login / Register</h2>
+        <div class="auth-container">
+            <div class="auth-form">
+                <!-- Sign In Form -->
+                <form id="sign-in-form" class="auth-form-section">
+                    <h3>Sign In</h3>
+                    <div class="form-group">
+                        <label for="signin-username">Username</label>
+                        <input type="text" id="signin-username" name="username" placeholder="Username" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" name="password" placeholder="Password" required />
+                    </div>
+                    <button type="button" onclick="signInUser()" class="btn">Sign In</button>
+                    <p>Don't have an account? <a href="#" onclick="toggleForm('signup')">Sign Up</a></p>
+                </form>
+
+                
+                <form id="sign-up-form" class="auth-form-section" style="display:none;">
+                    <h3>Sign Up</h3>
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" name="username" placeholder="Username" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" placeholder="Password" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirm Password" required />
+                    </div>
+                    <button type="button" onclick="signUpUser()" class="btn">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="toggleForm('signin')">Sign In</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="ca3.js"></script>
+</body>
+</html>
+

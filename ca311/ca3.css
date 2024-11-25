@@ -1,0 +1,440 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 40px;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #343a40;
+    text-align: center;
+}
+#search {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+.menu-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.menu-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+.menu-item:hover {
+    transform: scale(1.05);
+}
+button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background: #218838;
+}
+#cart-items {
+    list-style-type: none;
+    margin: 20px 0;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #343a40;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;}
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.auth-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px; 
+}
+.auth-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.auth-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+.btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+:root {
+    --primary-color: #28a745; 
+    --primary-hover-color: #218838;
+    --secondary-color: #007bff;
+    --secondary-hover-color: #0056b3; 
+}
+button {
+    background: var(--primary-color);
+    color: white;
+}
+button:hover {
+    background: var(--primary-hover-color);
+}
+.btn {
+    background-color: var(--secondary-color);
+}
+.btn:hover {
+    background-color: var(--secondary-hover-color);
+}
+#about-us {
+    padding: 50px 20px;  
+    background: #f4f6f9; 
+    border-radius: 12px; 
+    text-align: center;
+    margin: 40px 0;  
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+}
+h2, h3 {
+    color: #343a40; 
+    font-weight: bold; 
+    margin-bottom: 15px;
+}
+p {
+    font-size: 1.1em; 
+    line-height: 1.8; 
+    color: #666; 
+    max-width: 900px;  
+    margin: 0 auto 30px auto; 
+}
+.about-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; 
+}
+.about-image:hover {
+    transform: scale(1.05); 
+}
+#about-us {
+    background: linear-gradient(to right, #f4f6f9, #ffffff); 
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);}
+}
+#about-us h2, #about-us p, .about-image {
+    animation: fadeInUp 1s ease-out; 
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+#cart {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#cart:hover {
+    transform: scale(1.02);
+}
+#cart h2 {
+    text-align: center;
+    color: #343a40;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#cart p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.cart-item-info h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-item-info p {
+    color: #888;
+    margin: 5px 0;
+}
+.cart-item button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: #218838;
+}
+
+.cart-item button:focus {
+    outline: none;
+}
+#total-price {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+button.checkout-btn,
+button.clear-btn {
+    padding: 12px 20px;
+    margin: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button.checkout-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+button.checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+button.clear-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.clear-btn:hover {
+    background-color: #c82333;
+}
+#item-count {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    #cart {
+        padding: 15px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+.cart-item-info {
+        margin-left: 0;
+    }
+}
+/* Modal Styling */
+#checkout-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+#modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#modal-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#modal-body {
+    margin-bottom: 20px;
+}
+#modal-footer {
+    text-align: center;
+}
+button.close-modal, button.confirm-order {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button.close-modal {
+    background-color: #dc3545;
+    color: white;
+}
+button.close-modal:hover {
+    background-color: #c82333;
+}
+button.confirm-order {
+    background-color: #28a745;
+    color: white;
+}
+button.confirm-order:hover {
+    background-color: #218838;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);}
+    to {
+        opacity: 1;
+        transform: translateY(0); }}
+@media (max-width: 768px) {
+    #modal-content {
+        padding: 20px; }}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ca3.css">
+</head>
+<body>
+    <input type="text" id="search" placeholder="Search menu..." onkeyup="searchMenu()" />
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="pictures-of-pizza-23-1.jpg" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>Delicious cheese pizza</p>
+                <span>₹750</span>
+                <button onclick="addToCart('Pizza', 750)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="exps28800_UG143377D12_18_1b_RMS.jpg" alt="Burger">
+                <h3>Burger</h3>
+                <p>Juicy beef burger</p>
+                <span>₹600</span>
+                <button onclick="addToCart('Burger', 600)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="basil-blur-close-up-1437267.jpg"Pasta">
+                <h3>Pasta</h3>
+                <p>Creamy Alfredo pasta</p>
+                <span>₹900</span>
+                <button onclick="addToCart('Pasta', 900)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="Simple-Italian-Salad_EXPS_FT20_25957_F_0624_1-1.jpg" alt="Salad">
+                <h3>Salad</h3>
+                <p>Fresh garden salad</p>
+                <span>₹500</span>
+                <button onclick="addToCart('Salad', 500)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="th (1).jpg" alt="Steak">
+                <h3>Steak</h3>
+                <p>Grilled to perfection steak</p>
+                <span>₹1500</span>
+                <button onclick="addToCart('Steak', 1500)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="best-fish-and-chips-recipe-434856-Hero-5b61b89346e0fb00500f2141.jpg" alt="Fish and Chips">
+                <h3>Fish and Chips</h3>
+                <p>Crispy fish with fries</p>
+                <span>₹1200</span>
+                <button onclick="addToCart('Fish and Chips', 1200)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="th (2).jpg" alt="Tacos">
+                <h3>Tacos</h3>
+                <p>Spicy chicken tacos</p>
+                <span>₹700</span>
+                <button onclick="addToCart('Tacos', 700)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="1747258.jpg" alt="Fries">
+                <h3>Fries</h3>
+                <p>Crispy French fries</p>
+                <span>₹300</span>
+                <button onclick="addToCart('Fries', 300)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="th (3).jpg" alt="Nachos">
+                <h3>Nachos</h3>
+                <p>Cheesy nachos with jalapeños</p>
+                <span>₹400</span>
+                <button onclick="addToCart('Nachos', 400)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="th (4).jpg" alt="Ice Cream">
+                <h3>Ice Cream</h3>
+                <p>Vanilla ice cream</p>
+                <span>₹250</span>
+                <button onclick="addToCart('Ice Cream', 250)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="IMG_4087-feature-1.webp" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rich chocolate cake</p>
+                <span>₹300</span>
+                <button onclick="addToCart('Chocolate Cake', 300)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="th (5).jpg" alt="Cheeseburger">
+                <h3>Cheeseburger</h3>
+                <p>Classic cheeseburger with lettuce</p>
+                <span>₹650</span>
+                <button onclick="addToCart('Cheeseburger', 650)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="classic-caesar-salad-recipe-996054-Hero_01-33c94cc8b8e841ee8f2a815816a0af95.jpg" alt="Caesar Salad">
+                <h3>Caesar Salad</h3>
+                <p>Crispy romaine with Caesar dressing</p>
+                <span>₹600</span>
+                <button onclick="addToCart('Caesar Salad', 600)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="th (6).jpg" alt="Spring Rolls">
+                <h3>Spring Rolls</h3>
+                <p>Vegetarian spring rolls</p>
+                <span>₹500</span>
+                <button onclick="addToCart('Spring Rolls', 500)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="th (7).jpg" alt="Lemonade">
+                <h3>Lemonade</h3>
+                <p>Freshly squeezed lemonade</p>
+                <span>₹150</span>
+                <button onclick="addToCart('Lemonade', 150)">Add to Cart</button>
+            </div><br><br>
+<section id="cart">
+    <h2>Your Cart</h2>
+    <p id="item-count">Items in Cart: 0</p>
+    <ul id="cart-items">
+    </ul>
+    <p id="total-price">Total: ₹0</p>
+    <label for="address">Delivery Address:</label>
+    <input type="text" id="address" placeholder="Enter your delivery address" />
+    
+    <label for="payment-method">Payment Method:</label>
+    <select id="payment-method">
+        <option value="cod">Cash on Delivery</option>
+        <option value="credit-card">Credit/Debit Card</option>
+        <option value="paypal">PayPal</option>
+    </select>
+    <button class="checkout-btn" onclick="openCheckoutModal()">Checkout</button>
+    <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+</section>
+<div id="checkout-modal">
+    <div id="modal-content">
+        <div id="modal-header">Confirm Your Order</div>
+        <div id="modal-body">
+            <h3>Order Summary</h3>
+            <p><strong>Delivery Address:</strong> <span id="modal-address"></span></p>
+            <p><strong>Payment Method:</strong> <span id="modal-payment-method"></span></p>
+            <h4>Items:</h4>
+            <ul id="modal-items"></ul>
+            <p id="modal-total-price"></p>
+        </div>
+        <div id="modal-footer">
+            <button class="close-modal" onclick="closeCheckoutModal()">Cancel</button>
+            <button class="confirm-order" onclick="confirmOrder()">Confirm Order</button>
+        </div>
+    </div>
+</div>
+
+            </section>
+            
+            <script src="ca3.js"></script>
+</body>
+</html>
